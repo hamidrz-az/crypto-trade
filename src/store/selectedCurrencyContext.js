@@ -40,7 +40,7 @@ export const SelectedCurrencyProvider = (props) => {
   const addCurrencyToHistory = (currency) => {
     if (!userCurrencyHistory) setUserCurrencyHistory([currency]);
     else {
-      const updatedList = userCurrencyHistory.filetr(
+      const updatedList = userCurrencyHistory.filter(
         (c) => c.id !== currency.id
       );
       setUserCurrencyHistory([...updatedList, currency]);
