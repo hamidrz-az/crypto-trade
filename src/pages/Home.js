@@ -6,6 +6,7 @@ import currencyListContext from "../store/currencyListContext";
 import Chart from "../components/Chart";
 import TopAssets from "../components/TopAssets";
 import AssetsHistory from "../components/AssetsHistory";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 
 const OPTION_HOUR_MINUT = {
   hour: "2-digit",
@@ -113,13 +114,18 @@ const Home = () => {
         />
       </section>
       <section>
-        <div className="title">
-          <h4>Top assets</h4>
-        </div>
-        <TopAssets />
-        <br />
-        <br />
-        <AssetsHistory />
+        <Tabs className="tabs">
+          <TabList>
+            <Tab>Top Assets</Tab>
+            <Tab>Your History</Tab>
+          </TabList>
+          <TabPanel>
+            <TopAssets />
+          </TabPanel>
+          <TabPanel>
+            <AssetsHistory />
+          </TabPanel>
+        </Tabs>
       </section>
     </main>
   );

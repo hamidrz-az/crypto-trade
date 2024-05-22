@@ -1,0 +1,18 @@
+@import "./config";
+@import "../../node_modules/react-tabs/style/react-tabs";
+
+.tabs {
+  .react-tabs__tab-list {
+    margin: 0 0 20px;
+    .react-tabs__tab {
+      font-size: 1.6rem;
+      font-weight: bold;
+      padding: 1rem;
+      color: #fff;
+
+      &.react-tabs__tab--selected {
+        background-color: $secondary-color;
+      }
+    }
+  }
+}

@@ -38,8 +38,12 @@ export const SelectedCurrencyProvider = (props) => {
   };
 
   const addCurrencyToHistory = (currency) => {
-    if (userCurrencyHistory.indexOf(currency) === -1) {
-      setUserCurrencyHistory([...userCurrencyHistory, currency]);
+    if (!userCurrencyHistory) setUserCurrencyHistory([currency]);
+    else {
+      const updatedList = userCurrencyHistory.filetr(
+        (c) => c.id !== currency.id
+      );
+      setUserCurrencyHistory([...updatedList, currency]);
     }
   };
 

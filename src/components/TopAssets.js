@@ -4,7 +4,7 @@ import CurrencyTable from "./CurrencyTable";
 
 function TopAssets() {
   const { currencyList } = useContext(currencyListContext);
-  return <CurrencyTable currencies={currencyList}></CurrencyTable>;
+  return <CurrencyTable currencies={currencyList} />;
 }
 
 export default TopAssets;

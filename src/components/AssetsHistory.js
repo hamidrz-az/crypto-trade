@@ -4,7 +4,7 @@ import selectedCurrencyContext from "../store/selectedCurrencyContext";
 
 function AssetsHistory() {
   const { userCurrencyHistory } = useContext(selectedCurrencyContext);
-  return <CurrencyTable currencies={userCurrencyHistory}></CurrencyTable>;
+  return <CurrencyTable currencies={userCurrencyHistory.reverse()} />;
 }
 
 export default AssetsHistory;
